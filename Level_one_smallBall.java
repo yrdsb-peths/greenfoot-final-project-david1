@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level_one2 extends Actor
+public class Level_one_smallBall extends Level_one
 {
     /**
      * Act - do whatever the Level_one2 wants to do. This method is called whenever
