@@ -16,6 +16,18 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(400, 600, 1); 
+        Decision_point red = new Decision_point();
+        addObject(red, 200, 500);
+    }
+    
+    public void Level_one()
+    {
+        pizza pizza1 = new pizza();
+        int random_Maxf = 600;
+        int random_Minf = 0;        
+        int random_intf = (int)Math.floor(Math.random()*(random_Maxf-random_Minf+1)+random_Minf);
+
+        addObject(pizza1, random_intf, 0);
     }
 }
