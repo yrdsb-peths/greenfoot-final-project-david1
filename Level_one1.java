@@ -14,6 +14,7 @@ public class Level_one1 extends Actor
      */
     public void act()
     {
-        setLocation(getX(), getY()+1);// Add your action code here.
+        MyWorld world = (MyWorld) getWorld();
+        setLocation​(getX(), getY()+1);	// Add your action code here.
     }
 }

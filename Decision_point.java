@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Decision_point extends Actor
+public class Decision_point extends SmoothMover
 {
     /**
      * Act - do whatever the Decision_point wants to do. This method is called whenever
@@ -17,19 +17,36 @@ public class Decision_point extends Actor
         MyWorld world = (MyWorld) getWorld();
         if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("shift"))
         {
-            world.setLocation(-2, 0);
+            world.Location_X = world.Location_X - 2;
         } else if(Greenfoot.isKeyDown("left"))
         {
-            move(-5);
+            world.Location_X = world.Location_X - 5;
         }
         
         if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("shift"))
         {
-            move(2);
+            world.Location_X = world.Location_X + 2;
         } else if(Greenfoot.isKeyDown("right"))
         {
-            move(5);
+            world.Location_X = world.Location_X + 5;
         }
+        
+        if(Greenfoot.isKeyDown("up") && Greenfoot.isKeyDown("shift"))
+        {
+            world.Location_Y = world.Location_Y - 2;
+        } else if(Greenfoot.isKeyDown("up"))
+        {
+            world.Location_Y = world.Location_Y - 5;
+        }
+        
+        if(Greenfoot.isKeyDown("down") && Greenfoot.isKeyDown("shift"))
+        {
+            world.Location_Y = world.Location_Y + 2;
+        } else if(Greenfoot.isKeyDown("down"))
+        {
+            world.Location_Y = world.Location_Y + 5;
+        }
+        setLocation​(world.Location_X, world.Location_Y);
         // Add your action code here.
     }
 }
