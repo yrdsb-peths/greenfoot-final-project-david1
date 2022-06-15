@@ -17,27 +17,7 @@ public class Level_one extends Actor
     
     public void act()
     {
-        MyWorld world = (MyWorld) getWorld();
-        world.interval = 500;
-        //
-        bigBall oneb = new bigBall();
-        smallBall ones = new smallBall();
         
-        Timers.mark();
-        int random_intf = (int)Math.floor(Math.random()*(world.random_Maxf-world.random_Minf+1)+world.random_Minf);
-            
-        while(Timers.millisElapsed() % 500 == 0)
-        {
-            ones = new smallBall();
-            world.addObject(ones, random_intf, 0);
-        }
-            
-        random_intf = (int)Math.floor(Math.random()*(world.random_Maxf-world.random_Minf+1)+world.random_Minf);
-        while(Timers.millisElapsed() % 500 == 0)
-        {
-            oneb = new bigBall();
-            world.addObject(oneb, random_intf, 0);
-        }
     }
     
     

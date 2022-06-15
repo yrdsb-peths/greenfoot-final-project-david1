@@ -16,9 +16,9 @@ public class MyWorld extends World
     public int random_Maxf = 400;
     public int random_Minf = 0;    
     public int interval = 0;
-
+    public int random_intf;
     public SimpleTimerpublic Timer;
-    
+    SimpleTimerpublic Timers = new SimpleTimerpublic();
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -33,35 +33,35 @@ public class MyWorld extends World
         addObject(red, (int)Location_X, (int)Location_Y);
         
         
-        //Level_one();
+        Level_one();
     }
     
-    /*public void Level_one()
-    *{
-    *    interval = 500;
-    *    bigBall oneb = new bigBall();
-    *    smallBall ones = new smallBall();
-    *    SimpleTimerpublic Timers = new SimpleTimerpublic();
-    *    Timers.mark();
-    *
-    *    int random_intf = (int)Math.floor(Math.random()*(random_Maxf-random_Minf+1)+random_Minf);
-    *        
-    *    if(Timers.millisElapsed() % 500 == 0)
-    *    {
-    *        ones = new smallBall();
-    *        addObject(ones, random_intf, 0);
-    *    }
-    *        
-    *    random_intf = (int)Math.floor(Math.random()*(random_Maxf-random_Minf+1)+random_Minf);
-    *    if(Timers.millisElapsed() % 500 == 0)
-    *    {
-    *        oneb = new bigBall();
-    *        addObject(oneb, random_intf, 0);
-    *    }
-    *        //addObject(oneb, random_intf, 0);
-    *        
-    *}
-    */    
+    public void Level_one()
+    {
+        interval = 500;
+        bigBall oneb = new bigBall();
+        smallBall ones = new smallBall();
+        
+        Timers.mark();
+        
+        random_intf = (int)Math.floor(Math.random()*(random_Maxf-random_Minf+1)+random_Minf);
+        //change the place of the ball ramdom
+        while(Timers.millisElapsed() % 500 == 0)//per 0.5c        
+        {
+            ones = new smallBall();
+           addObject(ones, random_intf, 0);
+        }
+            
+        random_intf = (int)Math.floor(Math.random()*(random_Maxf-random_Minf+1)+random_Minf);
+        //change the place of the ball ramdom
+        while(Timers.millisElapsed() % 500 == 0)//per 0.5c        
+        {
+            oneb = new bigBall();
+            addObject(oneb, random_intf, 0);
+        }
+            //addObject(oneb, random_intf, 0);
+        System.out.println(Timers.millisElapsed());
+    }    
         
     }
     
