@@ -32,42 +32,38 @@ public class MyWorld extends World
         Decision_point red = new Decision_point();
         addObject(red, (int)Location_X, (int)Location_Y);
         
-        
-        Level_one();
+        act();
+        //Level_one();
     }
     
-    public void Level_one()
-    {
-        interval = 500;
-        //
-        Level_one_bigBall oneb = new Level_one_bigBall();
-        Level_one_smallBall ones = new Level_one_smallBall();
-        SimpleTimerpublic Timers = new SimpleTimerpublic();
-        Timers.mark();
-
-        for(int i = 0; i < 20; i++)
-        {
-            int random_intf = (int)Math.floor(Math.random()*(random_Maxf-random_Minf+1)+random_Minf);
-            
-            if(Timers.millisElapsed() % 500 == 0)
-            {
-                ones = new Level_one_smallBall();
-                addObject(ones, random_intf, 0);
-            }
-            
-            random_intf = (int)Math.floor(Math.random()*(random_Maxf-random_Minf+1)+random_Minf);
-            if(Timers.millisElapsed() % 500 == 0)
-            {
-                oneb = new Level_one_bigBall();
-                addObject(oneb, random_intf, 0);
-            }
-            addObject(oneb, random_intf, 0);
-            
-        }
-        
+    /*public void Level_one()
+    *{
+    *    interval = 500;
+    *    bigBall oneb = new bigBall();
+    *    smallBall ones = new smallBall();
+    *    SimpleTimerpublic Timers = new SimpleTimerpublic();
+    *    Timers.mark();
+    *
+    *    int random_intf = (int)Math.floor(Math.random()*(random_Maxf-random_Minf+1)+random_Minf);
+    *        
+    *    if(Timers.millisElapsed() % 500 == 0)
+    *    {
+    *        ones = new smallBall();
+    *        addObject(ones, random_intf, 0);
+    *    }
+    *        
+    *    random_intf = (int)Math.floor(Math.random()*(random_Maxf-random_Minf+1)+random_Minf);
+    *    if(Timers.millisElapsed() % 500 == 0)
+    *    {
+    *        oneb = new bigBall();
+    *        addObject(oneb, random_intf, 0);
+    *    }
+    *        //addObject(oneb, random_intf, 0);
+    *        
+    *}
+    */    
         
     }
     
         
-    }
     
