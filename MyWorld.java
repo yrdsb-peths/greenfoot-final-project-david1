@@ -32,7 +32,7 @@ public class MyWorld extends World
         Decision_point red = new Decision_point();
         addObject(red, (int)Location_X, (int)Location_Y);
         
-        act();
+        
         //Level_one();
     }
     
