@@ -49,4 +49,10 @@ public class Decision_point extends SmoothMover
         setLocation​(world.Location_X, world.Location_Y);
         // Add your action code here.
     }
+    public Decision_point()
+    {
+        GreenfootImage image = getImage();
+        image.scale(image.getWidth() - 30, image.getHeight() - 30);
+        setImage(image);
+    }
 }

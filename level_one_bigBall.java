@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class level_one_bigBall extends Level_one
+public class Level_one_bigBall extends Level_one
 {
     /**
      * Act - do whatever the Level_one1 wants to do. This method is called whenever
@@ -14,7 +14,7 @@ public class level_one_bigBall extends Level_one
      */
     public void act()
     {
-        MyWorld world = (MyWorld) getWorld();
-        setLocation​(getX(), getY()+1);	// Add your action code here.
+        
+        setLocation​(getX(), getY()+1);    // Add your action code here.
     }
 }
