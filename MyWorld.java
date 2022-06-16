@@ -13,6 +13,8 @@ public class MyWorld extends World
     public double Location_X = 225;
     public double Location_Y = 525;
     public double Speed = 100;
+    public double stratTime = 0;
+    public double endTime = 0;
     public int random_Maxf = 450;
     public int random_Minf = 0;    
     public int interval = 1000;

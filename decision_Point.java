@@ -33,7 +33,8 @@ public class decision_Point extends airPlane
             MyWorld world = (MyWorld) getWorld();
             Label gameOver = new Label("Game Over", 100);
             world.addObject(gameOver, 225, 325);
+            
         }
-    }
     
+    }
 }
