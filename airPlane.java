@@ -19,7 +19,7 @@ public class airPlane extends SmoothMover
         moveControll();
         shootBullet();
         addTarget();
-        gameOver();
+        
         // Add your action code here.
     }
     
@@ -55,48 +55,39 @@ public class airPlane extends SmoothMover
         MyWorld world = (MyWorld) getWorld();
         if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("shift"))
         {
-            world.Location_X = world.Location_X - 2;
+            world.Location_X = world.Location_X - 1;
         } else if(Greenfoot.isKeyDown("left"))
         {
-            world.Location_X = world.Location_X - 5;
+            world.Location_X = world.Location_X - 2;
         }
         
         if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("shift"))
         {
-            world.Location_X = world.Location_X + 2;
+            world.Location_X = world.Location_X + 1;
         } else if(Greenfoot.isKeyDown("right"))
         {
-            world.Location_X = world.Location_X + 5;
+            world.Location_X = world.Location_X + 2;
         }
         
         if(Greenfoot.isKeyDown("up") && Greenfoot.isKeyDown("shift"))
         {
-            world.Location_Y = world.Location_Y - 2;
+            world.Location_Y = world.Location_Y - 1;
         } else if(Greenfoot.isKeyDown("up"))
         {
-            world.Location_Y = world.Location_Y - 5;
+            world.Location_Y = world.Location_Y - 2;
         }
         
         if(Greenfoot.isKeyDown("down") && Greenfoot.isKeyDown("shift"))
         {
-            world.Location_Y = world.Location_Y + 2;
+            world.Location_Y = world.Location_Y + 1;
         } else if(Greenfoot.isKeyDown("down"))
         {
-            world.Location_Y = world.Location_Y + 5;
+            world.Location_Y = world.Location_Y + 2;
         }
         setLocation​((int)world.Location_X, (int)world.Location_Y);
     }
     
-    public void gameOver()
-    {
-        if(isTouching(enemy.class))
-        {
-            removeTouching(enemy.class);
-            MyWorld world = (MyWorld) getWorld();
-            Label gameOver = new Label("Game Over", 100);
-            world.addObject(gameOver, 225, 325);
-        }
-    }
+    
     
     public void shootBullet()
     {

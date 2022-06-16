@@ -30,6 +30,9 @@ public class MyWorld extends World
         airPlane airPlane = new airPlane();
         addObject(airPlane, (int)Location_X, (int)Location_Y);
         
+        decision_Point point = new decision_Point();
+        addObject(point, (int)Location_X, (int)Location_Y);
+        
         
 
     }
