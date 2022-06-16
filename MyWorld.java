@@ -15,7 +15,7 @@ public class MyWorld extends World
     public double Speed = 100;
     public int random_Maxf = 450;
     public int random_Minf = 0;    
-    public int interval = 0;
+    public int interval = 1000;
 
     /**
      * Constructor for objects of class MyWorld.
@@ -38,6 +38,7 @@ public class MyWorld extends World
     {
         Label gameOver = new Label("Game Over", 100);
         addObject(gameOver, 225, 325);
+        
     }
     
 

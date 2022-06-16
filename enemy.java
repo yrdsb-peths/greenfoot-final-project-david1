@@ -20,12 +20,12 @@ public class enemy extends Actor
         if(getY() >= 649)
         {
             world.removeObject(this);
-        }
+        }else{
         if(isTouching(bullet.class))
         {
             world.removeObject(this);
         }// Add your action code here.
-        
+    }
     }
     
     

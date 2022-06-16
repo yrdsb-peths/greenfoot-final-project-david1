@@ -34,14 +34,19 @@ public class airPlane extends SmoothMover
     public void addTarget()
     {
         MyWorld world = (MyWorld) getWorld();
-        int num = Greenfoot.getRandomNumber(100);
-        if(num>=98)
+        int num = Greenfoot.getRandomNumber(world.interval);
+        if(num<=50)
         {
             enemy enemy = new enemy();        
             int random_intf = (int)Math.floor(Math.random()*(world.random_Maxf-world.random_Minf+1)+world.random_Minf);
             
             world.addObject(enemy,random_intf,0);
             enemyNumber = enemyNumber + 1;
+            if(world.interval == 0)
+            {
+                world.interval--;
+            }
+            
         }
     }
     
