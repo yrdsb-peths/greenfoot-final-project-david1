@@ -95,14 +95,16 @@ public class airPlane extends SmoothMover
     {
         MyWorld world = (MyWorld) getWorld();
         
-        world.startTime = System.currentTimeMillis();
-        if(Greenfoot.isKeyDown("z") && world.endTime - world.startTime >= 100)
+        world.endTime = System.currentTimeMillis();
+        if(Greenfoot.isKeyDown("z") && world.endTime >= world.startTime + 500)
         {
-            bullet bullet = new bullet();
-            world.addObject(bullet, (int)world.Location_X, (int)world.Location_Y);
-                
+                bullet bullet = new bullet();
+                world.addObject(bullet, (int)world.Location_X, (int)world.Location_Y);
+                world.startTime = world.endTime;
             
         }
+        
+ 
     }
 }
 

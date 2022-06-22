@@ -13,8 +13,8 @@ public class MyWorld extends World
     public double Location_X = 225;
     public double Location_Y = 525;
     public double Speed = 100;
-    public double startTime = 0;
-    public double endTime = 0;
+    public long startTime = System.currentTimeMillis();
+    public long endTime = 0;
     public int random_Maxf = 450;
     public int random_Minf = 0;    
     public int interval = 1000;
